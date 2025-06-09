@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuda Splash Loader</title>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        #loader-container{
+            display: flex;
+            align-items: center;
+            height: calc(100vh - 165px);
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+
+        #loader-icon{
+            display: flex;
+            justify-content: center;
+        }
+
+        #loader{
+            position: relative;
+            overflow: hidden;
+            width: 280px;
+            height: 3px;
+            background-color: #eee;
+            border-radius: 10px;
+            max-width: 280px;
+            margin: 50px auto 40px;
+        }
+
+        #loader-inner {
+            position: absolute;
+            left: 0;
+            background-color: #40196d;
+            width: 100px;
+            height: 3px;
+            display: block;
+            top: 0;
+            animation: animate 1.7s infinite ease-in-out;
+        }
+
+        @keyframes animate {
+            0% {
+                left: -70px
+            }
+
+            50% {
+                left: 250px
+            }
+
+            100% {
+                left: -70px
+            }
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="loader-container">
+        <div id="loader-icon-wrap">
+            <!-- svg -->
+            <div id="loader-icon">
+                <svg width="69" height="auto" viewBox="0 0 352 304"     fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_8_3314)"><path d="M206.072 304L85.8049 166.281L151.503 304H105.978L38.9843 163.595L66.8177 304H38.8526L10.9753 163.377V304H0V0H10.9753V151.672L39.2477 0H67.125L38.7428 152.328L107.031 0H152.074L84.0489 151.76L207.565 0H278.158L150.384 157L278.751 304H206.072Z" fill="#40196D"></path><path d="M317.818 304.192C336.696 304.192 352 288.952 352 270.152C352 251.352 336.696 236.111 317.818 236.111C298.94 236.111 283.636 251.352 283.636 270.152C283.636 288.952 298.94 304.192 317.818 304.192Z" fill="#40196D"></path></g><defs><clipPath id="clip0_8_3314"><rect width="352" height="304" fill="white"></rect></clipPath></defs>
+                </svg>
+            </div>
+        </div>
+
+        <div id="loader">   
+            <span id="loader-inner"></span>
+        </div>
+    </div>
+</body>
+</html>
